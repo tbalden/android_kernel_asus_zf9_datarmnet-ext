@@ -2,7 +2,8 @@
 RMNET_OFFLOAD_SELECT := CONFIG_RMNET_OFFLOAD=m
 KBUILD_OPTIONS += $(RMNET_OFFLOAD_SELECT)
 KBUILD_OPTIONS += $(KBUILD_EXTRA) # Extra config if any
-KBUILD_EXTRA_SYMBOLS := $(M)/../../$(DATARMNET_CORE_PATH)/Module.symvers
+KBUILD_EXTRA_SYMBOLS := $(ANDROID_BUILD_TOP)/out/vendor/qcom/opensource/datarmnet/core/Module.symvers
+KBUILD_OPTIONS += RMNET_CORE_INC_DIR=$(ANDROID_BUILD_TOP)/vendor/qcom/opensource/datarmnet/core/
 
 M ?= $(shell pwd)
 

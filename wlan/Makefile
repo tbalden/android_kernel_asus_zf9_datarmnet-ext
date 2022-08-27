@@ -2,6 +2,7 @@
 RMNET_WLAN_SELECT := CONFIG_RMNET_WLAN=m
 KBUILD_OPTIONS += $(RMNET_WLAN_SELECT)
 KBUILD_OPTIONS += $(KBUILD_EXTRA) # Extra config if any
+KBUILD_OPTIONS += RMNET_CORE_INC_DIR=$(ANDROID_BUILD_TOP)/vendor/qcom/opensource/datarmnet/core/
 
 M ?= $(shell pwd)
 
